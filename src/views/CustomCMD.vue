@@ -1,5 +1,5 @@
 <template>
-    <p>this is custom cmd</p>   
+<p>Hello</p>
 </template>
 
 <script>
