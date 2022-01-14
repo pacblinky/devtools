@@ -2,32 +2,33 @@
     <div class="container">
         <div class="card card-sm bg-dark text-white">
             <div class="card-body">
-                <button @click="modal.show()">openme</button>
+                <button>openme</button>
             </div>
         </div>
     </div>
-    <modal :modal_id='1' :title="'Hello World'" @modal="getModal"/>
+    <modal modal_id="1" title="Hello World" @modal="getModal"/>
+    <modal modal_id="2" title="Hello Yes" @modal="getModal"/>
 </template>
 
 <script>
-import Modal from "./../Modal.vue";
+import Modal from "./../components/Modal.vue";
 export default {
     name: "Mapcycle",
     data()
     {
         return {
-            modal: null
+            modals: []
         }
     },
 
     methods:
     {
-        getModal(value)
+        getModal({modal,modal_id})
         {
-            this.modal = value
+            this.modals.push({id: modal_id, modal: modal});
         }
     },
-    
+
     components:
     {
         Modal
