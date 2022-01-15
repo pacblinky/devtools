@@ -6,8 +6,8 @@
             </div>
         </div>
     </div>
-    <modal modal_id="1" title="Hello World" @modal="getModal"/>
-    <modal modal_id="2" title="Hello Yes" @modal="getModal"/>
+    <modal id="1" title="Hello World" @modal="getModal"/>
+    <modal id="2" title="Hello Yes" @modal="getModal"/>
 </template>
 
 <script>
@@ -23,9 +23,9 @@ export default {
 
     methods:
     {
-        getModal({modal,modal_id})
+        getModal({modal,id})
         {
-            this.modals.push({id: modal_id, modal: modal});
+            this.modals.push({id: id, modal: modal});
         }
     },
 
