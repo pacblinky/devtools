@@ -3,11 +3,18 @@
         <div class="card card-sm bg-dark text-white">
             <div class="card-body">
                 <button>openme</button>
+                {{modals}}
+                <modal id="1" title="Add map" @modal="addModal">
+                    <template v-slot:body>
+                        <p>Body</p>
+                    </template>
+                    <template v-slot:footer>
+                        <p>Footer</p>
+                    </template>
+                </modal>
             </div>
         </div>
     </div>
-    <modal id="1" title="Hello World" @modal="getModal"/>
-    <modal id="2" title="Hello Yes" @modal="getModal"/>
 </template>
 
 <script>
@@ -17,13 +24,16 @@ export default {
     data()
     {
         return {
-            modals: []
+            modals: [],
+            mapcycles: [],
+            maps: [],
+            cvars: [],
         }
     },
 
     methods:
     {
-        getModal({modal,id})
+        addModal({modal,id})
         {
             this.modals.push({id: id, modal: modal});
         }
