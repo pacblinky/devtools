@@ -37,10 +37,7 @@ export default {
     mounted()
     {
       this.modal = new Modal(document.getElementById(this.id));
-      this.$emit("modal",{
-        modal: this.modal,
-        id: this.id
-      });
+      this.$emit("modal",this.modal)
     }
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
-    <p>Weapon files generator</p>
+    <div></div>
 </template>
 
 <script>
 export default {
-    name: "WeaponCFG"
+    name: "WeaponCFG",
 }
 </script>

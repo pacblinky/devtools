@@ -1,19 +1,7 @@
 <template>
     <div class="container">
-        <div class="card card-sm bg-dark text-white">
-            <div class="card-body">
-                <button>openme</button>
-                {{modals}}
-                <modal id="1" title="Add map" @modal="addModal">
-                    <template v-slot:body>
-                        <p>Body</p>
-                    </template>
-                    <template v-slot:footer>
-                        <p>Footer</p>
-                    </template>
-                </modal>
-            </div>
-        </div>
+        <modal id="addMap" title="Add map" @modal="modals['addMap'] = $event"/>
+        <button @click="modals['addMap'].show()">Open</button>
     </div>
 </template>
 
@@ -24,18 +12,10 @@ export default {
     data()
     {
         return {
-            modals: [],
+            modals: {},
             mapcycles: [],
             maps: [],
             cvars: [],
-        }
-    },
-
-    methods:
-    {
-        addModal({modal,id})
-        {
-            this.modals.push({id: id, modal: modal});
         }
     },
 

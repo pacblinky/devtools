@@ -1,9 +1,9 @@
 <template>
-<p>Hello</p>
+    <div></div>
 </template>
 
 <script>
 export default {
-    name: "CustomCMD"
+    name: "CustomCMD",
 }
 </script>
