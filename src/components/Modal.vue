@@ -7,10 +7,10 @@
         <button type="button" class="btn-close" aria-label="Close"></button>
       </div>
       <div class="modal-body bg-dark">
-        <slot :name="body"></slot>
+        <slot name="body"></slot>
       </div>
       <div class="modal-footer">
-        <slot :name="footer"></slot>
+        <slot name="footer"></slot>
       </div>
     </div>
   </div>
