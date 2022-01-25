@@ -4,7 +4,7 @@
     <div class="modal-content bg-dark text-white">
       <div class="modal-header">
         <h5 class="modal-title">{{title}}</h5>
-        <button type="button" class="btn-close" aria-label="Close"></button>
+        <button type="button" class="btn-close-white" @click="modal.hide()" aria-label="Close"></button>
       </div>
       <div class="modal-body bg-dark">
         <slot name="body"></slot>
