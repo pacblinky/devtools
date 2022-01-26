@@ -4,5 +4,6 @@ module.exports = {
     productionSourceMap: false,
     pwa: {
         name: "DevTools"
-    }
+    },
+    assetsDir: "assets"
 }
