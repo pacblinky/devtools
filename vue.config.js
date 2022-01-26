@@ -5,5 +5,4 @@ module.exports = {
     pwa: {
         name: "DevTools"
     },
-    assetsDir: "assets"
 }
